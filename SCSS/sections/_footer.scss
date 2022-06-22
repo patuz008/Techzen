@@ -1,0 +1,126 @@
+
+@use '../custom' as *;
+@use '../components/mixings' as *;
+
+.footer {
+    padding-top: 1rem;
+    background-color: $footer;
+}
+
+// Style the Contact Box contents
+
+.contact-box {
+    position: relative;
+
+    &__icon {
+        width: 2rem;
+        stroke: $secondary;
+        padding-top: 0.5rem;
+        
+        @include media-breakpoint-up(sm){
+            width: 4rem;
+        }
+    }
+
+    &__info {
+        padding: 0.4rem;
+        font-weight: 600;
+
+        &--title {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 1.2rem;
+
+            @include media-breakpoint-up(sm){
+                font-size: 1.4rem;
+            }
+        }
+
+        &--subtitle {
+            color: $gray-600;
+            text-decoration: none;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(sm){
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+// Style Social Media
+
+.footer-sm {
+
+    a {
+        color: aliceblue;
+
+        i {
+            font-size: 1rem;
+            margin-left: 1rem;
+
+            @include media-breakpoint-up(sm){
+                font-size: 1.5rem; 
+            }
+        }
+    }
+}
+
+// Style the company info content
+
+.company-list {
+    display: block;
+    list-style-type: none;
+    position: relative;
+
+    li {
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+
+        a {
+            color: aliceblue;
+            text-decoration: none;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+// style the copyright content
+
+.footer-bottom {
+    
+    &__copyright {
+        color: $gray-400;
+        font-weight: 600;
+
+        a {
+            color: $gray-300;
+            text-decoration: none;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}
+
+// style back to top
+
+.back-to-top {
+    position: fixed;
+    background-color: $secondary;
+    width: 3rem;
+    height: 3rem;
+    right: 1.85rem;
+    bottom: 1.85rem;
+    z-index: 9999;
+
+    i {
+        color: whitesmoke;
+        font-size: 1rem;
+        @include absoluteCenter
+    }
+}
